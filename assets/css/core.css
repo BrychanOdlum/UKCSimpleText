@@ -11,86 +11,64 @@ body {
 	padding:0px; /* TODO: Lets find out why this is needed! */
 }
 
-
-#lh {
-	position:absolute;
-	z-index:2;
-	background:rgba(255,255,255,0.2);
-	height:16px;
-	top:513px;
-	left:0px;
-	right:0px;
-}
-
-#container {
-	position:absolute;
-	z-index:5;
-	top:0px;
-	bottom:0px;
-	left:0px;
-	right:0px;
-	tab-size: 4;
-	overflow:scroll;
-	display:table;
-	width:100%;
-	min-height:100%;
-}
-
-#ln {
-	display:table-cell;
-	vertical-align:top;
-	background:rgba(37,37,37,0.7);
-	top:0px;
-	bottom:0px;
-	left:0px;
-	width:30px;
-	z-index:1;
-	font-family: "Courier New", Courier, monospace;
-	text-align:right;
-	font-size:13px;
-	line-height:17px;
-	color:#bbb;
-	padding-right:3px;
-}
-
-#ta-wrapper {
-	display:table-cell;
-	vertical-align:top;
-	margin:0px;
-	background:none;
-	border:none;
-	outline:none;
-	font-family: "Courier New", Courier, monospace;
-	font-size:13px;
-	line-height:17px;
-	color:#fff;
-}
 #ta {
-	vertical-align:top;
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:180px;
 	margin:0px;
-	height:100%;
-	width:100%;
+	padding:3px;
 	background:none;
 	border:none;
 	outline:none;
 	overflow:hidden;
 	font-family: "Courier New", Courier, monospace;
-	font-size:13px;
+	font-size:15px;
 	line-height:17px;
-	color:rgba(255,255,255,0);
+	color:#fff;
+	resize:none;
 }
 
-#ta-p {
-	font-family: "Courier New", Courier, monospace;
-	font-size:13px;
-	line-height:17px;
-	margin:0px;
-	padding:0px;
-	outline:none;
-	border:none;
-	position:absolute;
+#panel {
+	position:fixed;
 	top:0px;
-	left:33px;
+	bottom:0px;
 	right:0px;
+	width:180px;
+	background:rgba(37,37,37,0.8);
+}
+#panel > div {
+	padding:5px 10px;
+}
+
+#panel .heading {
 	color:#fff;
+	border-bottom: solid 1px #fff;
+	padding-bottom:2px;
+	width:90%;
+	margin-bottom:15px;
+}
+#panel .heading span {
+	text-transform:uppercase;
+	font-family: "Courier New", Courier, monospace;
+	font-weight:bold;
+	border-bottom:solid 2px #fff;
+}
+
+#panel .option {
+	color:#ccc;
+	height:20px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight:bold;
+}
+#panel .option div {
+	float:left;
+	
+}
+#panel .option div.input {
+	width:20px;
+}
+#panel .option div.desc {
+	
 }
