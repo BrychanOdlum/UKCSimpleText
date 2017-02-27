@@ -5,6 +5,7 @@ window.onload = function(){
 	taElem.addEventListener('click', keyPressed);
 	taElem.addEventListener('keydown', keyPressed);
 	taElem.addEventListener('keyup', keyPressed);
+	document.onkeydown = dKeyPressed;
 	
 	drawLineHighlight()
 	generateLineNumbers()
@@ -18,6 +19,21 @@ function scrolling(event) {
 function keyPressed(event) {
 	drawLineHighlight()
 	generateLineNumbers()
+}
+
+
+function dKeyPressed(event) {
+	var taElem = document.getElementById('ta');
+	if(event.keyCode == 9) {
+		if (document.activeElement === taElem) {
+			var start = taElem.selectionStart
+			var val = taElem.value
+			taElem.value = val.substring(0, start) + "	" + val.substring(taElem.selectionEnd)
+			taElem.selectionStart = taElem.selectionEnd + 1
+			taElem.focus()
+			return false;
+		}
+	}
 }
 
 
